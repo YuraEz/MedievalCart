@@ -19,6 +19,8 @@ public class CarriageController : MonoBehaviour
     [SerializeField] private float AttackRange;
     [SerializeField] private Transform eye;
 
+    [SerializeField] private Animator animator;
+
     //[SerializeField] private carr
     private CarriageInventory inventory;
 
@@ -42,13 +44,16 @@ public class CarriageController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, AttackRange, CarriageMask))
         {
+            animator.SetBool("Move", false);
             return;
         }
         if (Physics.Raycast(ray, out hit, AttackRange, PlayerMask))
         {
+            animator.SetBool("Move", false);
             inventory.GiveItem();
             return;
         }
+        animator.SetBool("Move", true);
 
         transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, moveSpeed * Time.deltaTime);
         Vector3 targetDirection = waypoints[currentWaypointIndex].position - transform.position;

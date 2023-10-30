@@ -38,6 +38,14 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        print("Ты умер");
+        animator.SetBool("IsDead", true);
+        UIManager.Instance.ChangeScreen("Lose");
+        Invoke("SetActiveFalse", 5);
+    }
+
+    private void SetActiveFalse()
+    {
         gameObject.SetActive(false);
     }
 
@@ -46,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (state != PlayerState.Action) return;
 
         Vector3 movement = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
-
+        animator.SetBool("IsMove", movement != Vector3.zero);
 
         if (movement != Vector3.zero)
         {
@@ -59,7 +67,7 @@ public class PlayerController : MonoBehaviour
             // Перемещаем персонаж.
             rb.MovePosition(transform.position + movement * Time.deltaTime * moveSpeed);
         }
-        //animator.SetBool("IsMove", movement != Vector3.zero);
+        
 
 
         //if (state != PlayerState.Action) return;

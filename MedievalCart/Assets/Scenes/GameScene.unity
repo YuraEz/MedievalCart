@@ -11403,7 +11403,7 @@ PrefabInstance:
     - target: {fileID: 9173185916821895542, guid: cc1d9ae112f9093468713bfc446711b2, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f57efe2d310b06648ba746c8602319bf, type: 2}
+      objectReference: {fileID: 9100000, guid: 5e28dfa08a4142b4d959afeccf8cf4db, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18913,6 +18913,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9173185916814890686, guid: cc1d9ae112f9093468713bfc446711b2, type: 3}
   m_PrefabInstance: {fileID: 877652873}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1455491240 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9173185916821895542, guid: cc1d9ae112f9093468713bfc446711b2, type: 3}
+  m_PrefabInstance: {fileID: 877652873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459282136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24366,10 +24371,8 @@ GameObject:
   - component: {fileID: 1917215987}
   - component: {fileID: 1917215992}
   - component: {fileID: 1917215993}
-  - component: {fileID: 1917215994}
   - component: {fileID: 1917215995}
   - component: {fileID: 1917215996}
-  - component: {fileID: 1917215997}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -24480,8 +24483,8 @@ MonoBehaviour:
   playerEnterPoint: {fileID: 1670528021}
   joystick: {fileID: 2046536421}
   rb: {fileID: 1917215993}
-  animator: {fileID: 0}
-  moveSpeed: 40
+  animator: {fileID: 1455491240}
+  moveSpeed: 10
   state: 1
 --- !u!54 &1917215993
 Rigidbody:
@@ -24510,37 +24513,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &1917215994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917215986}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bf2c17a2399fe549b99da7debece50b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPoints:
-  - {fileID: 994945382}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  animator: {fileID: 0}
-  pickUpLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  pickUpRange: 2
-  throwTargetLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  throwingToTragetDist: 16
-  throwForce: 15
-  picked: {fileID: 0}
-  Objects: []
 --- !u!114 &1917215995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24573,20 +24545,6 @@ MonoBehaviour:
   maxHealth: 25
   healthBar: {fileID: 638865480}
   health: 0
---- !u!114 &1917215997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917215986}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a16fbccdd70e6c439fcc0c89939bdcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screenName: 
-  poolable: {fileID: 0}
 --- !u!1 &1927388907
 GameObject:
   m_ObjectHideFlags: 0
