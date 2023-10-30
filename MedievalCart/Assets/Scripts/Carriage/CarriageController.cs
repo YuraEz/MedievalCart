@@ -15,16 +15,17 @@ public class CarriageController : MonoBehaviour
     [SerializeField] private float rotationSpeed;
 
     [SerializeField] private LayerMask CarriageMask;
+    [SerializeField] private LayerMask PlayerMask;
     [SerializeField] private float AttackRange;
+    [SerializeField] private Transform eye;
 
-    public static CarriageController Instance;
-    private void Awake()
-    {
-        Instance = this;
-    }
+    //[SerializeField] private carr
+    private CarriageInventory inventory;
+
 
     void Start()
     {
+        inventory = CarriageInventory.Instance;
         if (ChosenRoad == 1)
         {
             waypoints = CarriageSpawner.Instance.WayPoints1;
@@ -37,10 +38,15 @@ public class CarriageController : MonoBehaviour
 
     void Update()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(eye.position, eye.forward);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, AttackRange, CarriageMask))
         {
+            return;
+        }
+        if (Physics.Raycast(ray, out hit, AttackRange, PlayerMask))
+        {
+            inventory.GiveItem();
             return;
         }
 
@@ -90,6 +96,6 @@ public class CarriageController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.forward * AttackRange);
+        Gizmos.DrawRay(eye.position, eye.forward * AttackRange);
     }
 }

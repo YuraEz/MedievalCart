@@ -1,4 +1,4 @@
-//using NaughtyAttributes;
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,17 +23,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerState state;
     //[ReadOnly, SerializeField] private PlayerState state;
 
-    //private HealthComponent health;
+    private HealthComponent health;
 
     private void Awake()
     {
-        //health = GetComponent<HealthComponent>();
-        //health.onDie += Die;
+        health = GetComponent<HealthComponent>();
+        health.onDie += Die;
     }
 
     private void OnDestroy()
     {
-        //health.onDie -= Die;
+        health.onDie -= Die;
     }
 
     private void Die()
@@ -59,9 +59,15 @@ public class PlayerController : MonoBehaviour
             // Перемещаем персонаж.
             rb.MovePosition(transform.position + movement * Time.deltaTime * moveSpeed);
         }
+        //animator.SetBool("IsMove", movement != Vector3.zero);
+
+
+        //if (state != PlayerState.Action) return;
+
+        //Vector3 movement = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
         //rb.MovePosition(transform.position + movement * Time.deltaTime * moveSpeed);
 
-       // transform.rotation = Quaternion.LookRotation(movement);
+        //transform.rotation = Quaternion.LookRotation(movement);
         //animator.SetBool("IsMove", movement != Vector3.zero);
     }
 
