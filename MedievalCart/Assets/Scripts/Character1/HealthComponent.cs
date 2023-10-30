@@ -40,7 +40,6 @@ public class HealthComponent : MonoBehaviour
         if (health <= 0)
         {
             onDie?.Invoke();
-            UIManager.Instance.ChangeScreen("Lose");
         }
     }
 }
