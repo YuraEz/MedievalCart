@@ -39,9 +39,10 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         print("Ты умер");
+        moveSpeed = 0;
         animator.SetBool("IsDead", true);
         UIManager.Instance.ChangeScreen("Lose");
-        Invoke("SetActiveFalse", 5);
+        Invoke("SetActiveFalse", 2);
     }
 
     private void SetActiveFalse()
