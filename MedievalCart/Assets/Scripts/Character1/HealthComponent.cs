@@ -35,7 +35,8 @@ public class HealthComponent : MonoBehaviour
     {
         health -= damage;
         onDamage?.Invoke(health);
-        healthBar.SetValue(health);
+        UIProgressBar.Instance.SetValue(health);
+        //healthBar.SetValue(health);
 
         if (health <= 0)
         {

@@ -27,6 +27,7 @@ public class CarriageController : MonoBehaviour
 
     void Start()
     {
+        animator.SetBool("Move", true);
         inventory = CarriageInventory.Instance;
         if (ChosenRoad == 1)
         {

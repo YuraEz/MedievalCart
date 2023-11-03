@@ -73,7 +73,7 @@ public class AttackHandler : MonoBehaviour
         print("Attack");
         foreach (AttackEffect effect in attackEffects)
         {
-            effect.OnAttack(attackPoint);
+            effect.OnAttack();
         }
 
         if (animator) animator.SetTrigger("Attack");
@@ -81,7 +81,7 @@ public class AttackHandler : MonoBehaviour
 
         state = AttackState.Attacked;
 
-        MeleeAttack.instance.OnAttack(attackPoint);
+        MeleeAttack.instance.OnAttack();
         print("Тебя атаковали");
 
         Invoke(nameof(EndAttack), attackDelay);

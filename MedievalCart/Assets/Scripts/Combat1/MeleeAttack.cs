@@ -10,6 +10,9 @@ public class MeleeAttack : AttackEffect
     [SerializeField] private int maxAttacked = 1;
     [SerializeField] private LayerMask damagableLayers;
 
+    [SerializeField] private float MaxHealth = 25;
+    private float health;
+
     public static MeleeAttack instance;
 
     private void Awake()
@@ -22,10 +25,13 @@ public class MeleeAttack : AttackEffect
 
     }
 
-    public override void OnAttack(Vector3 attackPoint)
+    //Vector3 attackPoint
+    public override void OnAttack()
     {
         print("Вызвана функция");
         HealthComponent.instance.Damage(damage);
+        //health = MaxHealth - damage;
+        //UIProgressBar.Instance.SetValue(health);
         //Collider[] colliders = Physics.OverlapSphere(transform.position, radius, damagableLayers);
         //int attacked = 0;
 

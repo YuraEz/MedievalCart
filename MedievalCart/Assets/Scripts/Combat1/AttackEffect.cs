@@ -7,8 +7,8 @@ public abstract class AttackEffect : MonoBehaviour
     [SerializeField] private ParticleSystem attackEffect;
 
     public abstract void OnInit();
-    public virtual void OnAttack(Vector3 attackPoint)
+    public virtual void OnAttack()
     {
-        if (attackEffect) attackEffect.Play();
+    //    if (attackEffect) attackEffect.Play();
     }
 }

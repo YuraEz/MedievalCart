@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        health = GetComponent<HealthComponent>();
+        health = HealthComponent.instance;
+
         health.onDie += Die;
     }
 

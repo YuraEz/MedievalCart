@@ -8,6 +8,13 @@ public class UIProgressBar : MonoBehaviour, IScreenListener
 {
     private Slider slider;
 
+    public static UIProgressBar Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         slider = GetComponent<Slider>();
