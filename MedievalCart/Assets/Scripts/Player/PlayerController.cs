@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [SerializeField] private PlayerState state;
+    public ParticleSystem MoveEffect1;
+    public ParticleSystem MoveEffect2;
     //[ReadOnly, SerializeField] private PlayerState state;
 
     private HealthComponent health;
@@ -61,6 +63,8 @@ public class PlayerController : MonoBehaviour
 
         if (movement != Vector3.zero)
         {
+            MoveEffect1.Play();
+            MoveEffect2.Play();
             // ¬ычисл€ем целевой угол поворота на основе направлени€ движени€.
             Quaternion targetRotation = Quaternion.LookRotation(movement);
 
@@ -70,7 +74,7 @@ public class PlayerController : MonoBehaviour
             // ѕеремещаем персонаж.
             rb.MovePosition(transform.position + movement * Time.deltaTime * moveSpeed);
         }
-        
+
 
 
         //if (state != PlayerState.Action) return;
