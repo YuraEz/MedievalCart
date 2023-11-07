@@ -1884,14 +1884,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 908765017, guid: a50a475e2d1734c4482d03fbc1a726af, type: 3}
+  m_Sprite: {fileID: -274783033, guid: a1e37a0a042c27449895b75fcf386753, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2838,6 +2838,7 @@ GameObject:
   - component: {fileID: 711214612}
   - component: {fileID: 711214611}
   - component: {fileID: 711214613}
+  - component: {fileID: 711214614}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -2863,7 +2864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -460}
+  m_AnchoredPosition: {x: 0, y: 370}
   m_SizeDelta: {x: 1124, y: 684.3755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711214611
@@ -2879,14 +2880,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.60784316, b: 0.60784316, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -910255504, guid: a50a475e2d1734c4482d03fbc1a726af, type: 3}
+  m_Sprite: {fileID: 439822427, guid: a1e37a0a042c27449895b75fcf386753, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2911,7 +2912,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711214609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5645c5a5179ee2646805f14c5d7e8ceb, type: 3}
   m_Name: 
@@ -2952,6 +2953,20 @@ MonoBehaviour:
     OnFinished:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &711214614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711214609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1815d2d0b0869714db264a25a325513b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1630936456}
+  duration: 0.5
 --- !u!1 &732336657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,8 +3891,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
-  m_sharedMaterial: {fileID: 6520703211903974585, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
+  m_sharedMaterial: {fileID: 1603981595554166490, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4469,8 +4484,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
-  m_sharedMaterial: {fileID: 6520703211903974585, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
+  m_sharedMaterial: {fileID: 1603981595554166490, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5538,6 +5553,7 @@ RectTransform:
   - {fileID: 1741259199}
   - {fileID: 383482420}
   - {fileID: 711214610}
+  - {fileID: 1630936456}
   m_Father: {fileID: 587152365}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6395,6 +6411,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbddc4ef9676cc419e81e06aaa836d8, type: 3}
+--- !u!1 &1630936455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630936456}
+  m_Layer: 0
+  m_Name: PanelTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1630936456
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630936455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1330315991}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -460}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1640718436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6884,14 +6936,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 908765017, guid: a50a475e2d1734c4482d03fbc1a726af, type: 3}
+  m_Sprite: {fileID: -274783033, guid: a1e37a0a042c27449895b75fcf386753, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8578,8 +8630,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
-  m_sharedMaterial: {fileID: 6520703211903974585, guid: 9046a6ac845a4be4eaf1440e9d062e50, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
+  m_sharedMaterial: {fileID: 1603981595554166490, guid: 44c5b5df0a15b7548a06d551fe5a3854, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
