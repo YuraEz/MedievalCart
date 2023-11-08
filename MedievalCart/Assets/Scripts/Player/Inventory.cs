@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
         {
             if (collider.TryGetComponent(out PovozkaItem item) && items.Contains(item) == false)
             {
+                item.TurnOnEffect();
                 items.Add(item);
                 item.GetComponent<Collider>().enabled = false; // Отключаем коллайдер
                 item.transform.SetParent(transform);
